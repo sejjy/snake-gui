@@ -18,9 +18,10 @@
 #define GRID_SIZE     (GRID_WIDTH * GRID_HEIGHT)
 #define RECT_SIZE     32
 #define FONT_SIZE     24
-#define WINDOW_WIDTH  ((GRID_WIDTH + 2) * RECT_SIZE)
+#define WINDOW_WIDTH  ((GRID_WIDTH  + 2) * RECT_SIZE)
 #define WINDOW_HEIGHT ((GRID_HEIGHT + 2) * RECT_SIZE)
 #define COLOR_BG      BLACK
+#define COLOR_TEXT    WHITE
 #define COLOR_EMPTY   DARKGRAY
 #define COLOR_HEAD    GREEN
 #define COLOR_BODY    DARKGREEN
@@ -172,14 +173,14 @@ void print_scores(void)
 	DrawTextEx(font,
 	           TextFormat("score: %3d   hiscore: %3d", score, hiscore),
 	           (Vector2){ RECT_SIZE + RECT_SIZE / 3.0f, 5 },
-	           FONT_SIZE, 0, WHITE);
+	           FONT_SIZE, 0, COLOR_TEXT);
 }
 
 void draw_walls(void)
 {
 	DrawRectangleLinesEx((Rectangle){ RECT_SIZE - 2,
 	                                  RECT_SIZE - 2,
-	                                  GRID_WIDTH * RECT_SIZE + 4,
+	                                  GRID_WIDTH  * RECT_SIZE + 4,
 	                                  GRID_HEIGHT * RECT_SIZE + 4 },
 	                     2, COLOR_EMPTY);
 }
@@ -212,7 +213,7 @@ void print_controls(void)
 	           "move: w a s d   exit: esc",
 	           (Vector2){ RECT_SIZE + RECT_SIZE / 3.0f,
 	                      WINDOW_HEIGHT - RECT_SIZE + 5 },
-	           FONT_SIZE, 0, WHITE);
+	           FONT_SIZE, 0, COLOR_TEXT);
 }
 
 bool read_input(void)
