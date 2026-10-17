@@ -31,6 +31,8 @@ A graphical snake game in C using [raylib](https://github.com/raysan5/raylib)
 
 #
 
-### Reference
+### Credits
 
 - [snake-tui](https://github.com/sejjy/snake-tui) - A text-based snake game
+- [PixelCode](https://github.com/qwerasd205/PixelCode) - A pixel font designed
+  to actually be good for programming

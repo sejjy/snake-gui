@@ -108,7 +108,7 @@ void init_window(void)
 	InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Snake");
 	SetTargetFPS(60);
 	window = LoadRenderTexture(WINDOW_WIDTH, WINDOW_HEIGHT);
-	font = LoadFontEx("GoogleSansCodeNerdFont-Regular.ttf", FONT_SIZE, NULL, 0);
+	font = LoadFontEx("PixelCode.ttf", FONT_SIZE, NULL, 0);
 }
 
 void init_state(void)
@@ -212,7 +212,7 @@ void print_controls(void)
 	DrawTextEx(font,
 	           "move: w a s d   exit: esc",
 	           (Vector2){ RECT_SIZE + RECT_SIZE / 3.0f,
-	                      WINDOW_HEIGHT - RECT_SIZE + 5 },
+	                      WINDOW_HEIGHT - RECT_SIZE + 2 },
 	           FONT_SIZE, 0, COLOR_TEXT);
 }
 
